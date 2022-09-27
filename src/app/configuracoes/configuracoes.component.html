@@ -1,0 +1,8 @@
+<div class="configuracoes_container">
+  <p class="configuracoes_container__title">
+    Configurações
+  </p>
+  <mat-slide-toggle
+    [checked]="useDefault()" (change)="toggle($event)"
+  ><span class="configuracoes_container__slide__toggle">Som</span></mat-slide-toggle>
+</div>

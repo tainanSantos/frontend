@@ -1,0 +1,41 @@
+<mat-drawer-container class="drawer-container__style" hasBackdrop>
+  <mat-toolbar class="toolbar_style">
+    <button class="toolbar_style__button" (click)="drawer.toggle()">
+      <img class="toolbar_style__button__icon" src="../../assets/menu.svg" alt="">
+    </button>
+
+    <span class="example-spacer"></span>
+    <button mat-button [matMenuTriggerFor]="beforeMenu" class="toolbar_style__button">
+      <img class="toolbar_style__button__icon" src="../../assets/exit.svg" alt="">
+    </button>
+    <mat-menu #beforeMenu="matMenu" xPosition="before">
+      <a routerLink="/criar_conta" mat-menu-item >Criar conta</a>
+      <a routerLink="/login" mat-menu-item>Sair</a>
+    </mat-menu>
+  </mat-toolbar>
+  <mat-drawer #drawer class="drawer-container__style__drawer" mode="over">
+    <ul class="drawer-container__style__drawer__ul">
+      <li><a (click)="drawer.toggle()" routerLinkActive="router_activate" class="drawer-container__style__drawer__item"
+             routerLink="partida">Partida</a></li>
+      <li><a (click)="drawer.toggle()" routerLinkActive="router_activate" class="drawer-container__style__drawer__item"
+             routerLink="historico">Histórico</a></li>
+      <li><a (click)="drawer.toggle()" routerLinkActive="router_activate" class="drawer-container__style__drawer__item"
+             routerLink="configuracoes">Configurações</a></li>
+      <li><a (click)="drawer.toggle()" routerLinkActive="router_activate" class="drawer-container__style__drawer__item"
+             routerLink="creditos">Creditos</a></li>
+      <li><a (click)="drawer.toggle()" routerLinkActive="router_activate" class="drawer-container__style__drawer__item"
+             routerLink="ajuda">Ajuda</a></li>
+    </ul>
+
+    <div class="drawer-container__style__drawer__divider">
+      <a class="drawer-container__style__drawer__item" href="">Sair</a>
+    </div>
+
+  </mat-drawer>
+
+  <router-outlet>
+
+  </router-outlet>
+
+
+</mat-drawer-container>

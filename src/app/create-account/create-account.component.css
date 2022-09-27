@@ -1,0 +1,98 @@
+.login_container{
+  height: 100vh;
+  width: 100vw;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+}
+
+.login_container__form{
+  width: 400px;
+  padding-bottom: 100px;
+
+}
+
+.login_container__form__title{
+  font-style: normal;
+  font-weight: 700;
+  font-size: 32px;
+  line-height: 39px;
+  padding: 16px 0;
+  color: #D58936;
+}
+
+
+.login_container__form__control{
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  padding-bottom: 16px;
+}
+
+.login_container__form__control__label{
+
+  font-style: normal;
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 19px;
+  margin: 4px 0;
+
+  color: #CDD4DE;
+}
+
+.login_container__form__control__input{
+
+  border: none;
+  outline: none;
+  padding: 18px 12px;
+  border-radius: 8px;
+}
+
+.login_container__form__control__input::placeholder{
+  font-style: italic;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 19px;
+
+  color: #767676;
+}
+
+
+.login_container__form__button{
+  padding: 16px;
+  font-style: normal;
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 19px;
+  color: #202C3B;
+  background: #D58936;
+  border: 1px solid #D58936;
+  outline: none;
+  border-radius: 8px;
+  width: 100%;
+  margin: 16px 0;
+  cursor: pointer;
+}
+
+
+.login_container__form__create{
+  font-style: normal;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 19px;
+
+  color: #FFFFFF;
+}
+
+
+.login_container__form__create_account{
+  text-decoration: none;
+  font-style: italic;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 19px;
+
+  color: #D58936;
+}
