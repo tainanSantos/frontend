@@ -7,7 +7,7 @@ import { Component, OnInit } from '@angular/core';
 })
 export class HistoricoComponent implements OnInit {
 
-  typesOfShoes: string[] = ['Julia', 'Maria', 'Pedro'];
+  typesOfShoes: string[] = ['Julia'];
 
 
   constructor() { }
