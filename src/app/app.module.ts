@@ -18,7 +18,7 @@ import {LoginComponent} from './login/login.component';
 import {MatMenuModule} from "@angular/material/menu";
 import {MatDialogModule} from '@angular/material/dialog';
 import {MatButtonModule} from '@angular/material/button';
-import {ModalComponent} from './modal/modal.component';
+import {ModalCustomComponent} from './modal-custom/modal-custom.component';
 import {MatListModule} from "@angular/material/list";
 import {MatSlideToggleModule} from "@angular/material/slide-toggle";
 import {RankingComponent} from './ranking/ranking.component';
@@ -34,7 +34,7 @@ import {RankingComponent} from './ranking/ranking.component';
     AjudaComponent,
     CreditosComponent,
     LoginComponent,
-    ModalComponent
+    ModalCustomComponent
   ],
   imports: [
     BrowserModule,

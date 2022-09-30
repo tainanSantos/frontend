@@ -278,7 +278,7 @@ export class GameComponent implements OnInit {
           this.stopAnimations();
           //  verificado consição de parada do game
           if (this.moedasFaseUm.length > 0) {
-            //  exibir modal de perdeu  e tentar novamente
+            //  exibir modal-custom de perdeu  e tentar novamente
             this.playAudioError()
             this.stopAnimations();
             this.resetOptionsSelect();
@@ -286,7 +286,7 @@ export class GameComponent implements OnInit {
             this.loadMedals()
             this.showDialogResultEmitResulSession("Tente novamente :(", 1, false);
           } else {
-            //  exibir modal de sucesso e passar para a próxima fase
+            //  exibir modal-custom de sucesso e passar para a próxima fase
             if (this.gamePhase < 3) {
               this.showDialogResultEmitResulSession("Vamos para a próxima fase.", 1, true);
               this.gamePhase += 1;

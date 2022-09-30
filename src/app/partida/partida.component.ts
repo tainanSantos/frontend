@@ -1,9 +1,6 @@
 import {Component, OnInit} from '@angular/core';
-import {
-  ModalComponent
-} from "../modal/modal.component";
 import {MatDialog} from "@angular/material/dialog";
-import {Sprite} from "../models/Sprite";
+import {ModalCustomComponent} from "../modal-custom/modal-custom.component";
 
 @Component({
   selector: 'app-partida',
@@ -19,7 +16,7 @@ export class PartidaComponent implements OnInit {
   }
 
   showDialog(event: any) {
-    this.dialog.open(ModalComponent, {data: {event: event}})
+    this.dialog.open(ModalCustomComponent, {data: {event: event}})
   }
 
 }
