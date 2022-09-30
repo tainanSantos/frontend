@@ -20,7 +20,6 @@ export class Sprite {
       this.height = this.image.height
       console.log(this.width);
       console.log(this.height);
-
     }
     this.moving = false
     this.sprites = sprites
