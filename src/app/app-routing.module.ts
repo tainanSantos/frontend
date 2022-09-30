@@ -26,6 +26,10 @@ const routes: Routes = [
     ],
   },
 
+  {
+    path: "**", pathMatch: "full", redirectTo: "app/partida"
+  }
+
 ];
 
 @NgModule({
