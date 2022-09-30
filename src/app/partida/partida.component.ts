@@ -1,7 +1,7 @@
 import {Component, OnInit} from '@angular/core';
 import {
-  DialogElementsExampleDialogComponent
-} from "../dialog-elements-example-dialog/dialog-elements-example-dialog.component";
+  ModalComponent
+} from "../modal/modal.component";
 import {MatDialog} from "@angular/material/dialog";
 import {Sprite} from "../models/Sprite";
 
@@ -19,7 +19,7 @@ export class PartidaComponent implements OnInit {
   }
 
   showDialog(event: any) {
-    this.dialog.open(DialogElementsExampleDialogComponent, {data: {event: event}})
+    this.dialog.open(ModalComponent, {data: {event: event}})
   }
 
 }

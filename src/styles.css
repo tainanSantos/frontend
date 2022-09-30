@@ -23,3 +23,30 @@ body {
 }
 
 
+
+.title_container {
+  width: 800px;
+  margin: 0 auto;
+  padding: 24px;
+}
+
+
+.title_container__title {
+  font-weight: 700;
+  font-size: 32px;
+  line-height: 39px;
+  color: #D58936;
+}
+
+.title_container__points {
+  color: #D58936;
+  padding: 12px 0;
+}
+
+.title_container__points__value{
+  font-weight: 500;
+  line-height: 19px;
+  color: #CDD4DE;
+
+}
+
