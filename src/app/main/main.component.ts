@@ -7,10 +7,13 @@ import { Component, OnInit } from '@angular/core';
 })
 export class MainComponent implements OnInit {
 
+  namePlayer = '';
+
 
   constructor() { }
 
   ngOnInit(): void {
+    this.namePlayer =  localStorage.getItem("namePlayer") as string ;
   }
 
 }

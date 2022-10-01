@@ -14,7 +14,7 @@ import {PartidaComponent} from './partida/partida.component';
 import {ConfiguracoesComponent} from './configuracoes/configuracoes.component';
 import {AjudaComponent} from './ajuda/ajuda.component';
 import {CreditosComponent} from './creditos/creditos.component';
-import {LoginComponent} from './login/login.component';
+import {StartComponent} from './start/start.component';
 import {MatMenuModule} from "@angular/material/menu";
 import {MatDialogModule} from '@angular/material/dialog';
 import {MatButtonModule} from '@angular/material/button';
@@ -22,6 +22,7 @@ import {ModalCustomComponent} from './modal-custom/modal-custom.component';
 import {MatListModule} from "@angular/material/list";
 import {MatSlideToggleModule} from "@angular/material/slide-toggle";
 import {RankingComponent} from './ranking/ranking.component';
+import {FormsModule} from "@angular/forms";
 
 @NgModule({
   declarations: [
@@ -33,8 +34,9 @@ import {RankingComponent} from './ranking/ranking.component';
     ConfiguracoesComponent,
     AjudaComponent,
     CreditosComponent,
-    LoginComponent,
-    ModalCustomComponent
+    StartComponent,
+    ModalCustomComponent,
+
   ],
   imports: [
     BrowserModule,
@@ -48,7 +50,8 @@ import {RankingComponent} from './ranking/ranking.component';
     MatDialogModule,
     MatButtonModule,
     MatListModule,
-    MatSlideToggleModule
+    MatSlideToggleModule,
+    FormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]

@@ -1,7 +1,5 @@
-import {Component, ElementRef, OnInit, ViewChild, NgZone} from '@angular/core';
-import {Sprite} from "./models/Sprite";
-import {offset} from "./utils/offset";
-import {Boundary} from "./models/Boundary";
+import {Component, OnInit } from '@angular/core';
+
 
 @Component({
   selector: 'app-root',

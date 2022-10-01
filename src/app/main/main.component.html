@@ -9,8 +9,7 @@
       <img class="toolbar_style__button__icon" src="../../assets/exit.svg" alt="">
     </button>
     <mat-menu #beforeMenu="matMenu" xPosition="before">
-      <a routerLink="/criar_conta" mat-menu-item >Criar conta</a>
-      <a routerLink="/login" mat-menu-item>Sair</a>
+      <a  mat-menu-item >{{namePlayer}}</a>
     </mat-menu>
   </mat-toolbar>
   <mat-drawer #drawer class="drawer-container__style__drawer" mode="over">
@@ -28,6 +27,8 @@
     </ul>
 
     <div class="drawer-container__style__drawer__divider">
+      <a (click)="drawer.toggle()" routerLinkActive="router_activate" class="drawer-container__style__drawer__item"
+         routerLink="/start">Sair</a>
     </div>
 
   </mat-drawer>

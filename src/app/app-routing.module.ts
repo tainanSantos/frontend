@@ -5,12 +5,12 @@ import {PartidaComponent} from "./partida/partida.component";
 import {ConfiguracoesComponent} from "./configuracoes/configuracoes.component";
 import {CreditosComponent} from "./creditos/creditos.component";
 import {AjudaComponent} from "./ajuda/ajuda.component";
-import {LoginComponent} from "./login/login.component";
+import {StartComponent} from "./start/start.component";
 import { RankingComponent } from './ranking/ranking.component';
 
 const routes: Routes = [
   {
-    path: 'login', component: LoginComponent
+    path: 'start', component: StartComponent
   },
   {
     path: 'app', component: MainComponent, children: [

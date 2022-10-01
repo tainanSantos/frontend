@@ -1,0 +1,12 @@
+<div class="login_container">
+  <div class="login_container__form">
+    <p class="login_container__form__title">Bem vindo!</p>
+
+    <div class="login_container__form__control">
+      <label class="login_container__form__control__label" for="name">Informe seu nome</label>
+      <input class="login_container__form__control__input" type="name" name="text" id="name" [(ngModel)]="namePlayer" placeholder="Informe seu nome">
+    </div>
+    <button class="login_container__form__button" (click)="onNextPage()">Play</button>
+
+  </div>
+</div>
