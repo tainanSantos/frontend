@@ -301,7 +301,7 @@ export class GameComponent implements OnInit {
             } else {
               this.playAudioSucesso();
               // Navegando para a tela de históricos
-              this.router.navigate(['/app/historico']);
+              this.router.navigate(['/app/ranking']);
               this.showDialogResultEmitResulSession("Você concluiu o jogo. Vá em histórico e veja sua classificação", 1, true);
             }
           }
