@@ -1,4 +1,6 @@
-import { Component, OnInit } from '@angular/core';
+import {Component, OnInit} from '@angular/core';
+import {Ranking} from "../models/Ranking";
+import {RankingService} from "../services/ranking.service";
 
 @Component({
   selector: 'app-ranking',
@@ -7,10 +9,16 @@ import { Component, OnInit } from '@angular/core';
 })
 export class RankingComponent implements OnInit {
 
-  typesOfShoes: string[] = ['Julia'];
+  rankings: Ranking[] = [];
 
 
-  constructor() { }
+  constructor(
+    private rankingService: RankingService
+  ) {
+    this.rankingService.listRanking().subscribe(
+      value => this.rankings = value
+    )
+  }
 
   ngOnInit(): void {
   }

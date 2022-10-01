@@ -1,8 +1,8 @@
 <div class="title_container">
   <p class="title_container__title">Ranking</p>
   <mat-selection-list #shoes [multiple]="false">
-    <mat-list-option *ngFor="let shoe of typesOfShoes" [value]="shoe" class="historico_container__option">
-      {{shoe}}
+    <mat-list-option *ngFor="let ranking of rankings" [value]="rankings" class="historico_container__option">
+      {{ranking.name}}
     </mat-list-option>
   </mat-selection-list>
 </div>
