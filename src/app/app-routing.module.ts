@@ -6,14 +6,16 @@ import {ConfiguracoesComponent} from "./configuracoes/configuracoes.component";
 import {CreditosComponent} from "./creditos/creditos.component";
 import {AjudaComponent} from "./ajuda/ajuda.component";
 import {StartComponent} from "./start/start.component";
-import { RankingComponent } from './ranking/ranking.component';
+import {RankingComponent} from './ranking/ranking.component';
+import {StartGuard} from "./utils/start.guard";
+import {PartidaGuard} from "./utils/partida.guard";
 
 const routes: Routes = [
   {
-    path: 'start', component: StartComponent
+    path: 'start', component: StartComponent, canActivate: [StartGuard]
   },
   {
-    path: 'app', component: MainComponent, children: [
+    path: 'app', component: MainComponent, canActivate: [PartidaGuard], children: [
       {path: 'partida', component: PartidaComponent},
       {path: 'ranking', component: RankingComponent},
       {path: 'configuracoes', component: ConfiguracoesComponent},

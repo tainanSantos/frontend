@@ -8,6 +8,8 @@ import {MatDialog} from "@angular/material/dialog";
 import {Collisions} from "../utils/collisions";
 import {ActivatedRoute, Router} from "@angular/router";
 import {Position} from "../models/Positiion";
+import {RankingService} from "../services/ranking.service";
+import {Ranking} from "../models/Ranking";
 
 @Component({
   selector: 'app-game',
@@ -35,6 +37,8 @@ export class GameComponent implements OnInit {
   animation = false;
   pixelMove = 0;
 
+  pointsPlayers = 0;
+
 
   options: ItemSelect[];
   option_function: ItemSelect[]
@@ -46,7 +50,8 @@ export class GameComponent implements OnInit {
 
   constructor(
     public dialog: MatDialog,
-    private router: Router
+    private router: Router,
+    private rankingService: RankingService
   ) {
     this.options = [
       new ItemSelect("assets/drag_drop/top.svg", 't'),
@@ -218,6 +223,7 @@ export class GameComponent implements OnInit {
   }
 
   startAnimations() {
+
     if (this.selected_normal.length > 0) {
       this.selected_normal.forEach(event => {
         if (event.key != 'f') {
@@ -228,6 +234,7 @@ export class GameComponent implements OnInit {
         }
       })
       if (this.directions.length > 0) {
+        this.pointsPlayers += this.directions.length
         this.animation = true;
       } else {
         alert("Selecione a sequência antes de começar o jogo")
@@ -250,7 +257,7 @@ export class GameComponent implements OnInit {
     this.player.image = this.player.sprites.bottom;
   }
 
-  onAnimate() {
+  async onAnimate() {
 
     window.requestAnimationFrame(() => this.onAnimate());
 
@@ -299,8 +306,8 @@ export class GameComponent implements OnInit {
               this.loadCollisions();
 
             } else {
+              await this.saveRanking();
               this.playAudioSucesso();
-              // Navegando para a tela de históricos
               this.router.navigate(['/app/ranking']);
               this.showDialogResultEmitResulSession("Você concluiu o jogo. Vá em histórico e veja sua classificação", 1, true);
             }
@@ -435,5 +442,15 @@ export class GameComponent implements OnInit {
 
   onRemoveItemListFunction(j: number) {
     this.selected_function.splice(j, 1);
+  }
+
+  private saveRanking() {
+    let rankingResultFinal = new Ranking();
+    rankingResultFinal.points = this.pointsPlayers;
+    rankingResultFinal.name = localStorage.getItem('namePlayer') as string;
+    this.rankingService.saveRanking(rankingResultFinal).subscribe(value => {
+    }, error => {
+    });
+
   }
 }

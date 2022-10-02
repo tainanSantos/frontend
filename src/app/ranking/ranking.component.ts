@@ -11,6 +11,9 @@ export class RankingComponent implements OnInit {
 
   rankings: Ranking[] = [];
 
+  displayedColumns: string[] = ['points', 'name'];
+
+
 
   constructor(
     private rankingService: RankingService

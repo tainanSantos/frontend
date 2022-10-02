@@ -1,8 +1,25 @@
 <div class="title_container">
   <p class="title_container__title">Ranking</p>
-  <mat-selection-list #shoes [multiple]="false">
-    <mat-list-option *ngFor="let ranking of rankings" [value]="rankings" class="historico_container__option">
-      {{ranking.name}}
-    </mat-list-option>
-  </mat-selection-list>
+
+   <table>
+     <thead>
+     <tr>
+       <th class="ranking_container__title">Classificação</th>
+       <th class="ranking_container__title">Nome</th>
+       <th class="ranking_container__title">Blocos utilizados</th>
+     </tr>
+
+     </thead>
+     <tbody>
+     <tr *ngFor="let ranking of rankings; let i = index" >
+       <td class="ranking_container__option">{{i + 1}}ª </td>
+       <td class="ranking_container__option">{{ranking.name}}</td>
+       <td class="ranking_container__option">{{ranking.points}}</td>
+     </tr>
+     </tbody>
+   </table>
+
+
+
+
 </div>

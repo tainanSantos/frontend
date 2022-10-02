@@ -8,13 +8,18 @@ import {Ranking} from "../models/Ranking";
 })
 export class RankingService {
 
-  private  readonly _baseUrl = "https://backend-ihm-game.herokuapp.com/ranking?_sort=points&_order=desc";
+  private readonly _baseUrl = "https://backend-ihm-game.herokuapp.com/ranking";
 
   constructor(private http: HttpClient) {
   }
 
   public listRanking(): Observable<Ranking[]> {
-    return this.http.get<Ranking[]>(this._baseUrl);
+    return this.http.get<Ranking[]>(`${this._baseUrl}?_sort=points`);
+  }
+
+  public saveRanking(ranking: Ranking): Observable<Ranking>{
+    return this.http.post<Ranking>(this._baseUrl, ranking);
+
   }
 
 }

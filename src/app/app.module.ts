@@ -37,7 +37,6 @@ import {HttpClientModule} from "@angular/common/http";
     CreditosComponent,
     StartComponent,
     ModalCustomComponent,
-
   ],
   imports: [
     BrowserModule,
@@ -53,7 +52,8 @@ import {HttpClientModule} from "@angular/common/http";
     MatListModule,
     MatSlideToggleModule,
     FormsModule,
-    HttpClientModule
+    HttpClientModule,
+
   ],
   providers: [],
   bootstrap: [AppComponent]

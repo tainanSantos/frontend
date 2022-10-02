@@ -9,11 +9,13 @@ export class MainComponent implements OnInit {
 
   namePlayer = '';
 
-
   constructor() { }
 
   ngOnInit(): void {
     this.namePlayer =  localStorage.getItem("namePlayer") as string ;
   }
 
+  resetLocalStorage() {
+    localStorage.clear();
+  }
 }

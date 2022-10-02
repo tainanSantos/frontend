@@ -1,10 +1,37 @@
 
-.historico_container__option {
+.ranking_container__option {
   font-style: normal;
   font-weight: 700;
   font-size: 16px;
   line-height: 19px;
   color: #CDD4DE;
+  padding: 8px ;
+}
+
+.ranking_container__title{
+  font-style: normal;
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 19px;
+  color: #D58936;
+  padding: 12px 8px;
+
 }
 
 
+table{
+  width: 100%;
+}
+
+thead{
+  border-bottom: 1px solid #D58936;
+}
+
+th {
+  border-bottom: 1px solid #D58936;
+  text-align: left;
+}
+
+tr:nth-child(even) {
+  background: #D58936
+}
