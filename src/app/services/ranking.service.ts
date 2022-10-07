@@ -1,4 +1,4 @@
-import {Injectable} from '@angular/core';
+import {EventEmitter, Injectable} from '@angular/core';
 import {HttpClient} from "@angular/common/http";
 import {Observable} from "rxjs";
 import {Ranking} from "../models/Ranking";
@@ -9,6 +9,8 @@ import {Ranking} from "../models/Ranking";
 export class RankingService {
 
   private readonly _baseUrl = "https://backend-ihm-game.herokuapp.com/ranking";
+
+  updateRanking = new EventEmitter();
 
   constructor(private http: HttpClient) {
   }

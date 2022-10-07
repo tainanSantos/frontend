@@ -309,7 +309,7 @@ export class GameComponent implements OnInit {
               await this.saveRanking();
               this.playAudioSucesso();
               this.router.navigate(['/app/ranking']);
-              this.showDialogResultEmitResulSession("Você concluiu o jogo. Vá em histórico e veja sua classificação", 1, true);
+              this.showDialogResultEmitResulSession("Você concluiu o jogo! Vá em histórico e veja sua classificação.", 1, true);
             }
           }
         } else {
@@ -449,6 +449,7 @@ export class GameComponent implements OnInit {
     rankingResultFinal.points = this.pointsPlayers;
     rankingResultFinal.name = localStorage.getItem('namePlayer') as string;
     this.rankingService.saveRanking(rankingResultFinal).subscribe(value => {
+      this.rankingService.updateRanking.emit(true)
     }, error => {
     });
 

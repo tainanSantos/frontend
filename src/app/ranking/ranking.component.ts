@@ -14,10 +14,19 @@ export class RankingComponent implements OnInit {
   displayedColumns: string[] = ['points', 'name'];
 
 
-
   constructor(
     private rankingService: RankingService
   ) {
+
+    this._updateListRankingUsers();
+    this.rankingService.updateRanking.subscribe((value) => {
+      this._updateListRankingUsers()
+    });
+
+
+  }
+
+  private _updateListRankingUsers() {
     this.rankingService.listRanking().subscribe(
       value => this.rankings = value
     )
